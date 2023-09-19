@@ -17,11 +17,18 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         {appState === AppState.PENDING && (
-          <Input label="seconds" name="seconds" setValue={setSeconds} />
+          <Input
+            label="seconds"
+            name="seconds"
+            setValue={setSeconds}
+            validator={validateSeconds}
+          />
         )}
         {(appState === AppState.READY || appState === AppState.RUNNING) && (
           <Input label="number" name="number" setValue={addNumber} />
         )}
+        {appState === AppState.RUNNING && <NumberFrequencies />}
+        <Debug />
       </main>
     </>
   );
