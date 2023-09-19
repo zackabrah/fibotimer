@@ -1,6 +1,9 @@
 import Head from "next/head";
+import NumberFrequencies from "~/components/NumberFrequencies";
 import { useStore, AppState } from "~/store";
+import Debug from "~/ui/Debug";
 import Input from "~/ui/Input";
+import { validateSeconds } from "~/validation/seconds";
 
 export default function Home() {
   // store
