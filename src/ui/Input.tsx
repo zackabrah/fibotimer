@@ -1,21 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 
-interface IInputProps {
+interface InputProps<T> {
+  setValue: (value: T) => void;
   label: string;
   name: string;
-  handleUpdate: React.FormEventHandler<HTMLFormElement>;
 }
 
-export default function Input({ name, label, handleUpdate }: IInputProps) {
+export default function Input<T>({ setValue, label, name }: InputProps<T>) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleUpdate = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ): void => {
+    e.preventDefault();
+    if (inputRef.current !== null) {
+      console.log(inputRef.current.value);
+      setValue(inputRef.current.value as T);
+      inputRef.current.value = "";
+    }
+  };
+
   return (
-    <form
-      className="flex flex-col items-center justify-center"
-      onSubmit={handleUpdate}
-    >
+    <>
       <label className="text-sm text-white" htmlFor={name}>
         {label}
       </label>
-      <input required type="number" name={name} id={name} />
-    </form>
+      <div>
+        <input ref={inputRef} required type="number" name={name} id={name} />
+        <button onClick={handleUpdate}>Submit</button>
+      </div>
+    </>
   );
 }

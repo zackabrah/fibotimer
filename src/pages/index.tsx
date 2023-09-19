@@ -1,32 +1,12 @@
 import Head from "next/head";
-import Link from "next/link";
 import { useStore, AppState } from "~/store";
 import Input from "~/ui/Input";
-import NumberInput from "~/ui/NumberInput";
-import SecondsInput from "~/ui/SecondsInput";
-
-// 1. On startup, the program will prompt the user for the number of seconds (X) between
-// outputting the frequency of each number to the screen.
-// 2. Every X seconds the program will display, in frequency descending order, the list of
-// numbers and their frequency.
-// 3. If the user enters 'halt' the timer should pause.
-// 4. If the user enters 'resume' the timer should resume.
-// 5. If the user enters a number that is one of the first 1000 numbers in the Fibonacci
-// sequence, the system should alert "FIB"
-// 6. If the user enters 'quit', the application should output the numbers and their frequency, a
-// farewell message, and finally terminate.
-
-// ok so I'll need an input field for sure to take in the number of seconds..
-// should i use 2 input fields? one for the number of seconds and one for the number of numbers?
-// they could switch on some kind of state flag
-// the states could be timer not started (no seconds input yet), seconds input but no inital number, and timer started
-// states: pending, ready, started, paused, stopped
-// I'll need a timer to count down from the number of seconds
-// let's start with the input
 
 export default function Home() {
   // store
   const appState = useStore((state) => state.appState);
+  const setSeconds = useStore((state) => state.setSeconds);
+  const addNumber = useStore((state) => state.addNumber);
 
   return (
     <>
@@ -37,10 +17,10 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         {appState === AppState.PENDING && (
-          <SecondsInput label="Seconds" name="seconds" />
+          <Input label="seconds" name="seconds" setValue={setSeconds} />
         )}
         {(appState === AppState.READY || appState === AppState.RUNNING) && (
-          <NumberInput label="number" name="number" />
+          <Input label="number" name="number" setValue={addNumber} />
         )}
       </main>
     </>
