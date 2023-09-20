@@ -1,52 +1,75 @@
-import React, { type FormEvent, useRef } from "react";
+import { parse } from "path";
+import React, { type FormEvent, useRef, useState, useCallback } from "react";
+import Toastify from "toastify-js";
+import { useStore } from "~/store";
+import confetti from "canvas-confetti";
 
-interface InputProps<T> {
-  setValue: (value: T) => void;
+interface InputProps {
+  setValue: (value: number) => void;
   label: string;
   name: string;
-  validator?: (value: T) => string | undefined;
+  validator?: (value: number) => string | undefined;
 }
 
-export default function Input<T>({
+export default function Input({
   setValue,
   label,
   name,
   validator,
-}: InputProps<T>) {
+}: InputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const fibArray = useStore((state) => state.fibArray);
 
-  const handleUpdate = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    if (inputRef.current !== null && inputRef.current.value !== "") {
-      const value = inputRef.current.value as T;
+    const inputValue = inputRef.current?.value;
 
-      // input valudation
-      if (validator instanceof Function) {
-        console.log(value);
-        const error = validator(value);
-        if (error) {
-          // set errors
-          console.error(error);
-          return;
-        }
-      }
+    // If input value is empty or undefined, return without executing further logic
+    if (!inputValue || inputValue === "") return;
 
-      setValue(inputRef.current.value as T);
-      inputRef.current.value = "";
+    const value = inputValue;
+
+    // check fibonacci number
+
+    if (fibArray.includes(parseInt(value))) {
+      Toastify({
+        text: `Fibonacci number!`,
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+      }).showToast();
     }
+
+    // Execute validator function if it exists
+    if (validator && validator instanceof Function) {
+      console.log(value);
+      const error = validator(parseInt(value));
+
+      // If there's an error returned from the validator, log it and return without setting the value
+      if (error) {
+        console.error(error);
+        return;
+      }
+    }
+
+    // Set the value using the provided setValue function
+    setValue(parseInt(value));
+
+    // Clear the input field after setting the value
+    inputRef.current.value = "";
   };
 
   return (
-    <form onSubmit={handleUpdate}>
+    <form onSubmit={handleSubmit} className="w-full">
       <label className="text-sm text-white" htmlFor={name}>
         {label}
       </label>
-      <div className="flex">
+      <div className="flex w-full">
         <input
           required
           type="number"
           ref={inputRef}
-          className="p-4 outline-none"
+          className="w-full p-4 outline-none"
           name={name}
           id={name}
         />
