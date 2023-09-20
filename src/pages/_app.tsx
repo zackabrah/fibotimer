@@ -1,3 +1,4 @@
+import "animate.css";
 import "~/styles/globals.css";
 import "toastify-js/src/toastify.css";
 import "~/styles/animation.css";

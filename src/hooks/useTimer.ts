@@ -30,6 +30,13 @@ export const useTimer = ({
     setState((prevState) => ({ ...prevState, status: "RUNNING" }));
   }, []);
 
+  const restart = useCallback(() => {
+    setState({
+      status: initialStatus,
+      time: initialTime,
+    });
+  }, [initialStatus, initialTime]);
+
   // Use the useEffect hook to handle autostart and initial time changes
   useEffect(() => {
     if (autostart) {
@@ -64,7 +71,7 @@ export const useTimer = ({
       intervalId = setInterval(() => {
         setState((prevState) => ({
           ...prevState,
-          time: prevState.time + step,
+          time: prevState.time - step,
         }));
       }, interval);
     }
@@ -78,5 +85,5 @@ export const useTimer = ({
   }, [status, step, interval]);
 
   // Return the necessary values and functions for external use
-  return { pause, start, status, time };
+  return { pause, start, status, time, step, restart };
 };

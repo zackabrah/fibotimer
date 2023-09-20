@@ -17,8 +17,10 @@ export type Config = {
 export type ReturnValue = {
   pause: () => void; // Function to pause the timer
   start: () => void; // Function to start/restart the timer
+  restart: () => void;
   status: Status; // The current status of the timer
   time: number; // The current time of the timer (in milliseconds)
+  step: number;
 };
 
 // Define an interface for the state of the timer
