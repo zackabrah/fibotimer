@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import InputGroup from "~/components/inputGroup";
 import { useRouter } from "next/router";
 import { useStore } from "~/store";
+import Footer from "~/components/footer";
 
 export default function Index() {
   const router = useRouter();
@@ -41,7 +42,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="z-10 flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
           <Transition
             show={isShowing}
@@ -53,15 +54,16 @@ export default function Index() {
             leaveTo="opacity-0 scale-95 "
           >
             <div className="flex flex-col space-y-4 rounded-lg bg-white shadow">
-              <div className="p-6">
-                <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-slate-800 sm:text-3xl">
-                  <span className="animate-pulse">🔥</span> FIBOTIMER{" "}
-                  <span className="animate-pulse">🔥</span>
-                </h2>
+              <h2 className="mx-auto w-full rounded-t-lg bg-indigo-500 p-4 text-center text-xl font-bold tracking-tight text-white sm:text-4xl">
+                <span className="animate-pulse">🔥</span> FIBOTIMER{" "}
+                <span className="animate-pulse">🔥</span>
+              </h2>
+              <div className="p-6 pt-0">
                 <p className="mx-auto mt-2 max-w-xl text-center text-lg text-slate-600">
                   Please input the amount of time in seconds between emitting
                   numbers and their frequency and an initial number to begin.
                 </p>
+                <hr className="my-6" />
                 <form
                   className="flex flex-col space-y-4"
                   onSubmit={handleSubmit}
@@ -70,21 +72,14 @@ export default function Index() {
                   <InputGroup label="Inital value" id="number" name="number" />
                   <button
                     type="submit"
-                    className="relative flex-1 items-center justify-center gap-x-3 rounded-b-lg border border-transparent bg-indigo-500 py-4 text-sm font-semibold text-white  hover:bg-indigo-800"
+                    className="relative flex-1 items-center justify-center gap-x-3 rounded-lg border border-transparent bg-indigo-500 py-4 text-sm font-semibold text-white  hover:bg-indigo-800"
                   >
                     LET&apos;S GET FIBBY!
                   </button>
                 </form>
               </div>
             </div>
-            <div className="mt-6 flex justify-center">
-              <a
-                href="https://www.linkedin.com/in/isaac-johnson-a478abaa/"
-                className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                Made with ❤️ for the FTR team by Isaac Johnson
-              </a>
-            </div>
+            <Footer />
           </Transition>
         </div>
       </div>

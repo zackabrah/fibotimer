@@ -11,7 +11,7 @@ const Background = ({ numberOfCircles }: IBackground) => {
   );
 
   return (
-    <div className="area">
+    <div className="area z-0">
       <ul className="circles">{circleElements}</ul>
     </div>
   );

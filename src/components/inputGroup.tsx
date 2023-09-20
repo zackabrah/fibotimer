@@ -18,6 +18,7 @@ export default function InputGroup({ label, id, name }: IInputGroup) {
           id={id}
           name={name}
           type="number"
+          autoComplete="off"
           required
           max={99}
           min={1}
