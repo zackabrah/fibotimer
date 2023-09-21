@@ -1,5 +1,7 @@
 # FIBOTIMER
 
+[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)
+
 ### Developed with ❤️ for the FTR team by Isaac Johnson ☺️
 
 Welcome to my fibbonacci timer inspired app, I tried to follow the requirement as closely as possible.
