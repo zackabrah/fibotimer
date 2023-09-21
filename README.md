@@ -1,6 +1,6 @@
 # FIBOTIMER
 
-[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)
+[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)
 
 ### Developed with ❤️ for the FTR team by Isaac Johnson ☺️
 
