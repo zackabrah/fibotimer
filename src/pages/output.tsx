@@ -46,7 +46,7 @@ export default function Output() {
   });
 
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="flex min-h-full flex-1 flex-col justify-center bg-gradient-to-t from-sky-400 to-sky-200  py-12 sm:px-6 lg:px-8">
       <div className="z-50 mt-10 sm:mx-auto sm:w-full sm:max-w-xl">
         <div className="mt-4">
           <TimeCard time={time} pause={pause} resume={start} status={status}>

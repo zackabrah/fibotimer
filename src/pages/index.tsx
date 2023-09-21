@@ -30,7 +30,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="flex min-h-full flex-1 flex-col justify-center bg-gradient-to-t from-sky-400 to-sky-200  py-12 sm:px-6 lg:px-8">
         <div className="z-50 mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
           <div className="flex flex-col space-y-6 rounded-lg bg-white shadow">
             <h2 className="mx-auto w-full rounded-t-lg bg-indigo-500 p-4 text-center text-xl font-bold tracking-tight text-white sm:text-4xl">
