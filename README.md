@@ -1,10 +1,12 @@
 # FIBOTIMER
 
-[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)
+[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app={VERCEL_APP_NAME})
 
 ### Developed with ❤️ for the FTR team by Isaac Johnson ☺️
 
 LIVE DEPLOYMENT - https://fibotimer-mbnc01ejm-zackabrah.vercel.app/
+
+![Drag Racing](public/screenshot.png)
 
 Welcome to my fibbonacci timer inspired app, I tried to follow the requirement as closely as possible.
 
