@@ -10,6 +10,6 @@ services:
     working_dir: /app
     ports:
       - "3000:3000"
-    image: t3-app
+    image: fibotimer-app
     environment:
       - DATABASE_URL=database_url_goes_here

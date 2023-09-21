@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useStore } from "~/store";
 
 export default function Debug() {
   // useStore is a custom hook that returns the store state
-  const store = useStore((state) => state);
 
   // subscribe to store updates
   useEffect(() => {

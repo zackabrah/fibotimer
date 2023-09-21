@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Index from "./index";
 import { useRouter } from "next/router";
 
