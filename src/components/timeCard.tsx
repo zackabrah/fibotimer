@@ -1,9 +1,8 @@
-import { PauseIcon, PlayIcon } from "@heroicons/react/20/solid";
 import Toastify from "toastify-js";
+import { PauseIcon, PlayIcon } from "@heroicons/react/24/solid";
 
 interface ITimeCardProps {
   time: number;
-  step: number;
   children: React.ReactNode;
   pause: () => void;
   resume: () => void;
@@ -28,7 +27,6 @@ export default function TimeCard({
           </div>
         </div>
       </div>
-
       <div className="grid space-x-6 p-6">
         <div className="col-span-10 flex flex-wrap items-center">
           {children}
@@ -52,7 +50,7 @@ export default function TimeCard({
               }`}
             >
               <PauseIcon className="h-5 w-5 text-white" aria-hidden="true" />
-              Pause
+              Halt
             </button>
           </div>
           <div className="-ml-px flex w-0 flex-1">

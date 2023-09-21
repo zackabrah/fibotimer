@@ -7,7 +7,7 @@ interface IBackground {
 const Background = ({ numberOfCircles }: IBackground) => {
   // Create an array of empty <li> elements based on the numberOfCircles prop
   const circleElements = Array.from({ length: numberOfCircles }).map(
-    (_, index) => <li key={index}></li>,
+    (_, index) => <li key={index} data-testid="circle"></li>,
   );
 
   return (
