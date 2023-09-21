@@ -4,12 +4,15 @@ const config = {
   parserOptions: {
     project: true,
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "jest"],
   extends: [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
   ],
+  env: {
+    "jest/globals": true,
+  },
   ignorePatterns: ["src/**/*.spec.ts", "src/**/*.test.ts"],
   rules: {
     // These opinionated rules are enabled in stylistic-type-checked above.
