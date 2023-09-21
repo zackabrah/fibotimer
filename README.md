@@ -4,7 +4,7 @@
 
 ### Developed with ❤️ for the FTR team by Isaac Johnson ☺️
 
-LIVE DEPLOYMENT - https://fibotimer-mbnc01ejm-zackabrah.vercel.app/
+LIVE DEPLOYMENT - [https://fibotimer-mbnc01ejm-zackabrah.vercel.app/](https://fibotimer.vercel.app/)
 
 Welcome to my fibbonacci timer inspired app, I tried to follow the requirement as closely as possible.
 
