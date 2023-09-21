@@ -4,8 +4,7 @@
 
 ### Developed with ❤️ for the FTR team by Isaac Johnson ☺️
 
-LIVE DEPLOYMENT - [https://fibotimer-mbnc01ejm-zackabrah.vercel.app/](https://fibotimer.vercel.app/)
-
+LIVE DEPLOYMENT - https://fibotimer.vercel.app/
 Welcome to my fibbonacci timer inspired app, I tried to follow the requirement as closely as possible.
 
 - The app will take a number input as a frequence in seconds which it will reorder and display all subsequent inputs.
