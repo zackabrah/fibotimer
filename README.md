@@ -1,6 +1,6 @@
 # FIBOTIMER
 
-[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)
+[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)![Vercel](https://vercelbadge.vercel.app/api/zackabrah/fibotimer)
 
 ### Developed with ❤️ for the FTR team by Isaac Johnson ☺️
 
