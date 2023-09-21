@@ -1,10 +1,10 @@
 # FIBOTIMER
 
-[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app={VERCEL_APP_NAME})
+[![ci](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zackabrah/fibotimer/actions/workflows/ci.yml)![Vercel](https://vercelbadge.vercel.app/api/zackabrah/fibotimer)
 
 ### Developed with ❤️ for the FTR team by Isaac Johnson ☺️
 
-LIVE DEPLOYMENT - https://fibotimer-mbnc01ejm-zackabrah.vercel.app/
+LIVE DEPLOYMENT - https://fibotimer.vercel.app/
 
 ![Drag Racing](public/screenshot.png)
 
@@ -45,6 +45,10 @@ npm install
 # Launch the app
 npm run dev
 ```
+
+## Deploy your own
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzackabrah%2Ffibotimer)
 
 ## Docker
 
