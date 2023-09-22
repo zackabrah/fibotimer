@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Html, Head, Main, NextScript } from "next/document";
 import Background from "~/components/background";
 
@@ -9,6 +10,7 @@ export default function Document() {
         <Main />
         <NextScript />
         <Background numberOfCircles={10} />
+        <Analytics />
       </body>
     </Html>
   );
